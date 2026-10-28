@@ -34,7 +34,7 @@ def load_config():
     for project in config["featured_projects"]:
         if not project.get("repo") or not project.get("asset"):
             raise ValueError("Each featured project needs repo and asset")
-        if not re.fullmatch(r"[^/\\s]+/[^/\\s]+", project["repo"]):
+        if not re.fullmatch(r"[^/\s]+/[^/\s]+", project["repo"]):
             raise ValueError(f"Invalid featured project repo: {project['repo']}")
         if Path(project["asset"]).name != project["asset"] or not project["asset"].endswith(".svg"):
             raise ValueError(f"Invalid featured project asset: {project['asset']}")
