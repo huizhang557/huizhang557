@@ -1,7 +1,7 @@
 {
-  "username": "huizhang556",
-  "display_name": "Selina Martin",
-  "bio": "你好，我是 Selina Martin，一名 C++/Qt 开发程序员。",
+  "username": "huizhang557",
+  "display_name": "Harry James",
+  "bio": "你好，我是 Harry James，一名 C++/Qt 开发程序员。",
   "gitee_url": "https://gitee.com/huizhang556",
   "telegram": {
     "label": "@changfai666",
@@ -32,8 +32,8 @@
     {"label": "Git", "color": "#22D3EE"}
   ],
   "featured_projects": [
-    {"repo": "huizhang556/pc-video-player", "asset": "pinned-pc-video-player.svg"},
-    {"repo": "huizhang556/vx_data_watch", "asset": "pinned-bbdown.svg"}
+    {"repo": "huizhang557/subvideoplayer", "asset": "pinned-pc-video-player.svg"},
+    {"repo": "huizhang557/ai-watch", "asset": "pinned-bbdown.svg"}
   ],
   "theme": {
     "background": "#111827",
