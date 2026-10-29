@@ -4,8 +4,8 @@
   <defs><style>.sans{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif}</style></defs>
   <rect width="1200" height="220" rx="30" fill="#111827" stroke="#334155" stroke-width="1.5"/>
   <text class="sans" x="48" y="78" font-size="44" font-weight="700" fill="#F8FAFC">ai-watch</text>
-  <text class="sans" x="48" y="119" font-size="18" fill="#CBD5E1">暂无项目描述</text>
-  <text class="sans" x="48" y="148" font-size="18" fill="#CBD5E1"></text>
+  <text class="sans" x="48" y="119" font-size="18" fill="#CBD5E1">这是一个使用 Android WebView</text>
+  <text class="sans" x="48" y="148" font-size="18" fill="#CBD5E1"> 开发的个人影视网页套壳应用。</text>
   <g transform="rotate(-90 560 110)"><circle cx="560" cy="110" r="44" fill="none" stroke="#A78BFA" stroke-width="22" stroke-dasharray="276.46 0.00" stroke-dashoffset="0.00"/></g>
   <circle cx="560" cy="110" r="30" fill="#111827"/>
   <text class="sans" x="560" y="115" text-anchor="middle" font-size="12" font-weight="600" fill="#C4B5FD">Tech</text>
