@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://gitee.com/huizhang556"><img src="./assets/readme/hero.svg" width="100%" alt="Selina Martin profile banner"></a>
+  <a href="https://gitee.com/huizhang556"><img src="./assets/readme/hero.svg" width="100%" alt="Harry James profile banner"></a>
 </p>
 
 <p align="center">
@@ -8,10 +8,10 @@
 
 ## 关于我
 
-你好，我是 Selina Martin，一名 C++/Qt 开发程序员。
+你好，我是 Harry James，一名 C++/Qt 开发程序员。
 
 <p align="center">
-  <img src="./assets/readme/about-me.svg" width="100%" alt="关于 Selina Martin">
+  <img src="./assets/readme/about-me.svg" width="100%" alt="关于 Harry James">
 </p>
 
 ## 技术栈
@@ -23,31 +23,31 @@
 ## GitHub 概览
 
 <p align="center">
-  <img src="./assets/readme/stats-overview.svg" width="100%" alt="Selina Martin GitHub overview">
+  <img src="./assets/readme/stats-overview.svg" width="100%" alt="Harry James GitHub overview">
 </p>
 
 ## 精选项目
 
 <p align="center">
-	<a href="https://github.com/huizhang556/pc-video-player">
-		<img src="./assets/readme/pinned-pc-video-player.svg" width="100%" alt="huizhang556/pc-video-player project card">
+	<a href="https://github.com/huizhang557/subvideoplayer">
+		<img src="./assets/readme/pinned-pc-video-player.svg" width="100%" alt="huizhang557/subvideoplayer project card">
 	</a>
 </p>
 
 <p align="center">
-	<a href="https://github.com/huizhang556/vx_data_watch">
-		<img src="./assets/readme/pinned-bbdown.svg" width="100%" alt="huizhang556/vx_data_watch project card">
+	<a href="https://github.com/huizhang557/ai-watch">
+		<img src="./assets/readme/pinned-bbdown.svg" width="100%" alt="huizhang557/ai-watch project card">
 	</a>
 </p>
 
 ## 个人亮点
 
 <p align="center">
-  <img src="./assets/readme/achievements.svg" width="100%" alt="Selina Martin profile highlights">
+  <img src="./assets/readme/achievements.svg" width="100%" alt="Harry James profile highlights">
 </p>
 
 <p align="center">
-  <a href="https://github.com/huizhang556">
+  <a href="https://github.com/huizhang557">
     <img src="./assets/readme/section-live-widgets.svg" width="100%" alt="实时数据">
   </a>
 </p>
@@ -57,20 +57,20 @@
 ### 3D 贡献图
 
 <p align="center">
-  <a href="https://github.com/huizhang556/huizhang556/tree/main/profile-3d-contrib">
-    <img src="https://raw.githubusercontent.com/huizhang556/huizhang556/main/profile-3d-contrib/profile-green-animate.svg" width="99%" alt="3D 贡献图">
+  <a href="https://github.com/huizhang557/huizhang557/tree/main/profile-3d-contrib">
+    <img src="https://raw.githubusercontent.com/huizhang557/huizhang557/main/profile-3d-contrib/profile-green-animate.svg" width="99%" alt="3D 贡献图">
   </a>
 </p>
 
 ### 动态贡献贪吃蛇
 
 <p align="center">
-  <a href="https://github.com/huizhang556/huizhang556/tree/output">
-    <img src="https://raw.githubusercontent.com/huizhang556/huizhang556/output/github-contribution-grid-snake.svg" alt="动态贡献贪吃蛇">
+  <a href="https://github.com/huizhang557/huizhang557/tree/output">
+    <img src="https://raw.githubusercontent.com/huizhang557/huizhang557/output/github-contribution-grid-snake.svg" alt="动态贡献贪吃蛇">
   </a>
 </p>
 
 ## 联系我
 
-- GitHub：[huizhang556](https://github.com/huizhang556)
+- GitHub：[huizhang557](https://github.com/huizhang557)
 - Telegram：[@changfai666](https://t.me/changfai666)

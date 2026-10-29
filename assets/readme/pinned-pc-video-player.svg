@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="220" viewBox="0 0 1200 220" role="img" aria-labelledby="title desc">
-  <title id="title">pc-video-player project card</title>
+  <title id="title">subvideoplayer project card</title>
   <desc id="desc">Generated project card for the user's featured GitHub repository.</desc>
   <defs><style>.sans{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif}</style></defs>
   <rect width="1200" height="220" rx="30" fill="#111827" stroke="#334155" stroke-width="1.5"/>
-  <text class="sans" x="48" y="78" font-size="44" font-weight="700" fill="#F8FAFC">pc-video-player</text>
-  <text class="sans" x="48" y="119" font-size="18" fill="#CBD5E1">SubVideoPlayer 是一款基于 </text>
-  <text class="sans" x="48" y="148" font-size="18" fill="#CBD5E1">Qt5 开发的 Windows 桌面音...</text>
+  <text class="sans" x="48" y="78" font-size="44" font-weight="700" fill="#F8FAFC">subvideoplayer</text>
+  <text class="sans" x="48" y="119" font-size="18" fill="#CBD5E1">subvideoplayer是基于Qt 5框</text>
+  <text class="sans" x="48" y="148" font-size="18" fill="#CBD5E1">架开发的一款功能丰富的音视频多媒体播放...</text>
   <g transform="rotate(-90 560 110)"><circle cx="560" cy="110" r="44" fill="none" stroke="#A78BFA" stroke-width="22" stroke-dasharray="194.33 82.13" stroke-dashoffset="0.00"/><circle cx="560" cy="110" r="44" fill="none" stroke="#60A5FA" stroke-width="22" stroke-dasharray="56.61 219.85" stroke-dashoffset="-194.33"/><circle cx="560" cy="110" r="44" fill="none" stroke="#F59E0B" stroke-width="22" stroke-dasharray="23.67 252.79" stroke-dashoffset="-250.95"/><circle cx="560" cy="110" r="44" fill="none" stroke="#34D399" stroke-width="22" stroke-dasharray="1.40 275.06" stroke-dashoffset="-274.62"/><circle cx="560" cy="110" r="44" fill="none" stroke="#22D3EE" stroke-width="22" stroke-dasharray="0.43 276.03" stroke-dashoffset="-276.01"/><circle cx="560" cy="110" r="44" fill="none" stroke="#64748B" stroke-width="22" stroke-dasharray="0.01 276.45" stroke-dashoffset="-276.45"/></g>
   <circle cx="560" cy="110" r="30" fill="#111827"/>
   <text class="sans" x="560" y="115" text-anchor="middle" font-size="12" font-weight="600" fill="#C4B5FD">Tech</text>
