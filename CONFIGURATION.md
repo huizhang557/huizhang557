@@ -19,7 +19,7 @@
 - `display_name`：Hero 横幅中的显示名称。
 - `featured_projects`：精选项目数组，按数组顺序显示。每项包含：
   - `repo`：仓库全名，格式为 `owner/repository`。
-  - `asset`：卡片 SVG 文件名，必须是当前目录下的 `.svg` 文件名，不能包含路径。
+  - `asset`：卡片 SVG 文件名，必须是当前目录下的 `.svg` 文件名，不能包含路径。它是精选项目的稳定资源槽位，不随项目变化。更换精选项目时只修改 `repo`，不要修改 `asset`，这样外部资源 URL 可以保持不变。新配置建议使用 `pinned-project-1.svg`、`pinned-project-2.svg` 等固定槽位名。
 
 示例：
 
@@ -34,9 +34,9 @@
 
 精选项目必须是公开仓库。这里的 `repo` 必须填写真实的 GitHub 仓库全名，即使仓库属于 `username` 对应的账号也一样。
 
-如果仓库设置为私有，GitHub API 可能返回 `404 Not Found`，这不一定表示仓库名称写错，也可能只是当前工作流没有读取权限。工作流使用仓库内置的 `GITHUB_TOKEN`，它不能自动读取账号下其他私有仓库；生成器也会主动拒绝把私有仓库信息写入公开主页。因此，私有精选项目会导致 `Update Profile Assets` 工作流失败，并继续保留上一次成功生成的 README 和 SVG 内容，看起来就像仍显示旧账号的数据。
+如果仓库设置为私有，GitHub API 可能返回 `404 Not Found`，这不一定表示仓库名称写错，也可能只是当前工作流没有读取权限。工作流使用仓库内置的 `GITHUB_TOKEN`，它不能自动读取账号下其他私有仓库。此时生成器会创建一个标明“私有仓库”的占位卡片，不会读取或公开私有项目的描述、语言、Stars 和 Forks；README 仍会正常更新。
 
-要展示私有项目，请先将项目公开；或者修改生成器并为工作流配置具有明确仓库读取权限的专用 Token。但不建议把私有项目的描述、语言、Stars 等信息发布到公开主页。
+如果希望展示项目详情，请先将项目公开。也可以为工作流配置具有明确仓库读取权限的专用 Token，但不建议把私有项目的描述、语言、Stars 等信息发布到公开主页。
 
 ### 可选配置
 
@@ -49,6 +49,12 @@
 - `about.cards`：About 卡片内容，每项包含 `icon`、`title`、`subtitle`、`color`。
 - `tech_stack`：技术栈标签数组，每项包含 `label` 和可选的 `color`。
 - `theme`：主题颜色，包括 `background`、`panel`、`border`、`text`、`muted`、`subtle`、`accent` 和 `chart`。
+  - `background`：Hero、关于我、技术栈、统计和精选项目等外层大卡片的背景色。
+  - `panel`：Hero 统计面板、关于我内部卡片和统计小卡片的背景色。
+  - `border`：卡片边框颜色。
+  - `text`、`muted`、`subtle`：主要文字、次要文字和辅助文字颜色。
+  - `accent`：强调色，例如 Hero 链接和部分装饰元素。
+  - `chart`：语言图表、技术标签和项目卡片图表使用的颜色数组。
 
 颜色必须使用六位十六进制格式，例如 `#22D3EE`。不要把 Token、密码、私钥或其他敏感信息写入配置文件；这个文件会提交到公开仓库。
 
@@ -66,6 +72,10 @@ python scripts/update_profile_assets.py
 - `assets/readme/*.svg`
 
 `README.md` 和 SVG 是生成文件，应该修改配置或 `README.template.md`，不要直接修改生成结果。
+
+### 生成资源文件名兼容性
+
+`asset` 文件名会被写入生成后的 `README.md`，也可能被 GitHub Raw 链接、外部文档或缓存直接引用。因此，已有资源文件名不建议随意重命名。更换精选项目时，可以继续使用原有的 `asset` 文件名，以保持外部链接不变；如果必须改名，应保留旧文件作为兼容副本，并同步检查 README 和所有外部引用。
 
 ## 两个 GitHub 账号
 
