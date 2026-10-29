@@ -14,7 +14,7 @@
   ],
   "about": {
     "headline": "C++ / Qt 开发者，专注桌面应用与自动化工具",
-    "motto": "世上无难事，只怕有心人。",
+    "motto": "今天再晚也是早，明天再早也是晚。",
     "cards": [
       {"icon": "C++", "title": "C++ / Qt", "subtitle": "桌面应用开发", "color": "#60A5FA"},
       {"icon": "PY", "title": "Python", "subtitle": "脚本与自动化", "color": "#F59E0B"},
