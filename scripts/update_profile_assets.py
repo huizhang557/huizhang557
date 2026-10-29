@@ -177,9 +177,40 @@ def get_public_repos():
     return repos
 
 
+def get_featured_project(project_config):
+    repo = project_config["repo"]
+    try:
+        return get_json(f"https://api.github.com/repos/{repo}")
+    except RuntimeError as error:
+        if "404" not in str(error):
+            raise
+        owner, name = repo.split("/", 1)
+        print(f"Warning: {repo} is unavailable, generating a private repository card")
+        return {
+            "full_name": repo,
+            "name": name,
+            "private": True,
+            "owner": {"login": owner},
+        }
+
+
 def write_project_card(project, filename):
     if project.get("private", False):
-        raise ValueError(f"Refusing to publish data from private repository: {project.get('full_name', project.get('name', 'unknown'))}")
+        repo = project.get("full_name", project.get("name", "private repository"))
+        write_asset(
+            filename,
+            f'''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="220" viewBox="0 0 1200 220" role="img" aria-labelledby="title desc">
+  <title id="title">{text(project.get("name", "Private repository"))} project card</title>
+  <desc id="desc">This featured repository is private and its details are not available to the workflow.</desc>
+  <defs><style>.sans{{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif}}</style></defs>
+  <rect width="1200" height="220" rx="30" fill="#111827" stroke="#334155" stroke-width="1.5"/>
+  <text class="sans" x="48" y="82" font-size="44" font-weight="700" fill="#F8FAFC">{text(project.get("name", "Private repository"))}</text>
+  <text class="sans" x="48" y="125" font-size="18" fill="#CBD5E1">Private repository · details unavailable to GitHub Actions</text>
+  <text class="sans" x="48" y="158" font-size="16" fill="#94A3B8">{text(repo)}</text>
+</svg>
+''',
+        )
+        return
     project_languages = get_json(project["languages_url"])
     project_description_lines = truncate_lines(
         project.get("description") or "暂无项目描述", line_limit=22, max_lines=2
@@ -261,7 +292,7 @@ def main():
     user = get_json(f"https://api.github.com/users/{USERNAME}")
     repos = get_public_repos()
     original_repos = [repo for repo in repos if not repo.get("fork", False)]
-    projects = [get_json(f"https://api.github.com/repos/{project['repo']}") for project in CONFIG["featured_projects"]]
+    projects = [get_featured_project(project) for project in CONFIG["featured_projects"]]
     total_stars = sum(repo.get("stargazers_count", 0) for repo in repos)
     languages = {}
     for repo in original_repos:
